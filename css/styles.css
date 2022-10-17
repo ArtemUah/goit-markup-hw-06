@@ -560,6 +560,65 @@ ol {
   color: #ffffff;
 }
 
+.footer-sub-btn{
+  display: flex;
+}
+
+.footer-input{
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+
+    font-size: 16px;
+      line-height: calc(20/16);
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+      display: flex;
+      justify-content: center;
+        align-items: center;
+
+  width: 200px;
+  height: 50px;
+
+  background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+  font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    cursor: none;
+    transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  cursor: pointer;
+}
+
+.subscribe-btn::after {
+  content: '';
+  background-image: url(../img/icon\ send.svg);
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
 /* -------------Backdrop--------- */
 .backdrop {
   position: absolute;
@@ -576,6 +635,7 @@ ol {
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -613,12 +673,171 @@ ol {
   width: 11px;
   height: 11px;
   fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-button:hover .modal-svg,
+.backdropbutton:focus .modal-svg {
+  fill: #2196F3;
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.backdrop-title {
+  font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.form-label {
+  display:block;
+}
+.form-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-label-text {
+   margin-bottom: 4px;
+
+ font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form-label-absolute {
+  position: relative;
+}
+
+.form-input {
+padding-left: 42px;
+
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-icon {
+  fill: #2196f3;
+}
+
+.form-textarea {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  height: 120px;
+  resize: none;
+  
+  font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-license {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.form-checkbox {
+    position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+    
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+}
+
+.form-license-svg {
+  width: 16px;
+  height: 15px;
+
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #212121;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-license-text {
+  font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.form-license-link {
+  text-decoration-line: underline;
+    color: #2196F3;
+    text-underline-offset: 3px;
+}
+
+.form-checkbox:checked + .form-license-svg {
+  background-color: #2196F3;
+  border-color: transparent;
+}
+
+.form-license-btn {
+ display: flex;
+  align-items: center;
+justify-content: center;
+margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
+
+  font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: none;
+}
+
+.form-license-btn:hover,
+.form-license-btn:focus {
+  cursor: pointer;
 }
 
 /* -----------------Портфоліо-------------- */
@@ -709,11 +928,6 @@ ol {
 
 .portfolio-link:hover .portfolio-description,
 .portfolio-link:focus .portfolio-description {
-  transform: translateY(0);
-  opacity: 1;
-}
-
- {
   transform: translateY(0);
   opacity: 1;
 }
